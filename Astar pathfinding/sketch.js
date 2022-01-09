@@ -10,8 +10,8 @@ function heuristic(a, b) {
   d *=1.0
   return d;
 } 
-var cols = 30;
-var rows = 30;
+var cols = 70;
+var rows = 70;
 var grid = new Array(cols);
 
 var openSet = [];
@@ -30,7 +30,7 @@ function Cell(i,j){
   this.neighbors = [];
   this.previous = undefined;
   this.wall = false;
-  if(random(1)<.2){
+  if(random(1)<.3){
     this.wall=true
   }
   this.show = function(r,g,b) {
@@ -83,7 +83,7 @@ function Cell(i,j){
 
 print(grid)
 function setup() { 
-  createCanvas(400, 400);
+  createCanvas(600, 600);
   console.log('A*');
   w = width / cols;
   h = height / rows;
